@@ -1,12 +1,12 @@
 import React, {
     Component
 } from 'react';
-import CardList from './CardList';
-import SearchBox from './SearchBox';
-import Scroll from './Scroll'
+import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll'
 import {
     robots
-} from './robots.js';
+} from '../robots.js';
 import './App.css'
 
 
@@ -30,8 +30,8 @@ class App extends Component {
     
     render() {
         
-        const filterRobots=this.state.robots.filter(robots=>{
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+        const filterRobots=this.state.robots.filter(robot=>{
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
         })
         
         return ( <
